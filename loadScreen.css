@@ -1,0 +1,40 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Start Of Mobile Screen Size */
+
+/* Open Website Section */
+.open-screen {
+    background-color: #121111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    animation: fadeIn 5s;
+}
+
+.open-screen img {
+    width: 60%;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0.8;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+/* Open Website Section */
+
+/* End Of Mobile Screen Size */
+
+@media only screen and (min-width: 1200px) {
+    .open-screen img {
+        width: 20%;
+    }
+}
