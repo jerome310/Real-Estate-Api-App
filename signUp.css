@@ -1,7 +1,7 @@
 /* Lato Text Font */
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
 
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -10,27 +10,37 @@
 /* Start Of Mobile Screen Size */
 
 /* Start Of Sign Up Section */
+
 .sign-in {
-   background-color: #121111;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   height: 100vh;
-   background-color: #6A8199;
-   font-family: 'Lato', sans-serif;
+    position: relative;
+    background-color: #121111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #6A8199;
+    font-family: 'Lato', sans-serif;
 }
 
 .sign-in img {
-   width: 60%;
+    width: 60%;
 }
 
+.sign-in-text-container {
+    position: absolute;
+}
+
+.sign-in-text-container h1 {
+    
+}
 
 /* End Of Sign Up Section */
 
 /* End Of Mobile Screen Size */
 
 @media only screen and (min-width: 1200px) {
-.sign-in img {
-    width: 20%;
-}
+    .sign-in img {
+        width: 20%;
+    }
 }
