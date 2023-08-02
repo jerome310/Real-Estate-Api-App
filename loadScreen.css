@@ -11,9 +11,6 @@ body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-/* Start Of Mobile Screen Size */
-
-/* Single Phone Website Page Section */
 .open-screen {
     position: relative;
     background-color: #121111;
@@ -24,7 +21,7 @@ body {
 }
 
 .open-screen img {
-    width: 60%;
+    width: 300px;
 }
 
 @keyframes fadeIn {
@@ -175,10 +172,3 @@ body {
     }
 }
 
-/* End Of Mobile Screen Size */
-
-@media only screen and (min-width: 1200px) {
-    .open-screen img {
-        width: 20%;
-    }
-}
