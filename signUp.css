@@ -78,6 +78,19 @@
     font-size: 16px;
 }
 
-@media only screen and (min-width: 1200px) {
-    
+.login-button {
+    margin-right: 20px;
+    text-align: center;
+    margin-top: 40px;
 }
+
+.login-button button {
+    width: 98%;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #0ACF83;
+    border-radius: 5px;
+    padding: 10px 0;
+    margin-right: 5px;
+}
+
