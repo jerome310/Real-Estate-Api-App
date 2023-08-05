@@ -9,8 +9,6 @@
 
 /* Start Of Mobile Screen Size */
 
-/* Start Of Sign Up Section */
-
 .sign-in {
     position: relative;
     background-color: #121111;
@@ -24,23 +22,62 @@
 }
 
 .sign-in img {
-    width: 60%;
+    width: 300px;
 }
 
 .sign-in-text-container {
+    color: #ffffff;
     position: absolute;
 }
 
 .sign-in-text-container h1 {
-    
+    color: #ffffff;
+    margin-right: 20px;
+    text-align: center;
+    font-size: 30px;
+    position: absolute;
+    top: -40%;
+    left: 0;
+    right: 0;
 }
 
-/* End Of Sign Up Section */
+.email-container {
+    margin-right: 25px;
+    margin-bottom: 25px;
+}
 
-/* End Of Mobile Screen Size */
+.email-container p {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.email-container input {
+    padding: 10px 35px 10px 15px;
+    border-radius: 5px;
+}
+
+.password-container p {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.password-input-section {
+    display: flex;
+    align-items: center;
+}
+
+.password-input-section input {
+    padding: 10px 35px 10px 15px;
+    border-radius: 5px;
+}
+
+.password-input-section i {
+    position: absolute;
+    left: 75%;
+    color: #C4C4C4;
+    font-size: 16px;
+}
 
 @media only screen and (min-width: 1200px) {
-    .sign-in img {
-        width: 20%;
-    }
+    
 }
