@@ -52,6 +52,7 @@
 }
 
 .email-container input {
+    outline: none;
     padding: 10px 35px 10px 15px;
     border-radius: 5px;
 }
@@ -67,6 +68,7 @@
 }
 
 .password-input-section input {
+    outline: none;
     padding: 10px 35px 10px 15px;
     border-radius: 5px;
 }
@@ -92,5 +94,14 @@
     border-radius: 5px;
     padding: 10px 0;
     margin-right: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.sign-up-border-line {
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
