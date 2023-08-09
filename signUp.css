@@ -141,6 +141,11 @@
     height: 45px;
     border-radius: 5px;
     margin-right: 5px;
+    cursor: pointer;
+}
+
+.g-signin2 {
+    /* display: none; */
 }
 
 .google-container img {
@@ -157,6 +162,7 @@
     width: 65px;
     height: 45px;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .apple-container img {
@@ -172,6 +178,7 @@
     width: 65px;
     height: 45px;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .facebook-container img {
