@@ -186,3 +186,13 @@
     object-fit: contain;
 }
 
+/* Adding Classes for Email Input Placeholder */
+.wrong-placeholder-color.email-input::placeholder {
+    color: #000000;
+    font-weight: 700;
+}
+
+.correct-placeholder-color.email-input::placeholder {
+    color: #757575;
+    font-weight: 300;
+}
