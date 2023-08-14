@@ -4,6 +4,7 @@ let btns = document.querySelectorAll(".sign-up-btns");
 let form = document.getElementById("form");
 let input = document.querySelector(".email-input");
 let password = document.querySelector(".password-input");
+let eyeBall = document.querySelector('#eyeball');
 let displayValue = [];
 
 // Sign In Buttons
@@ -51,4 +52,11 @@ signUpBtn.addEventListener("click", () => {
     console.log("Wrong");
   }
   password.value = "";
+});
+
+// NEXT TO WORK ON ↓
+
+// Password Eyeball Logic
+eyeBall.addEventListener('click', () => {
+  console.log('Clicked')
 });
