@@ -3,8 +3,6 @@ let signUpBtn = document.querySelector(".sign-up-button");
 let btns = document.querySelectorAll(".sign-up-btns");
 let form = document.getElementById("form");
 let input = document.querySelector(".email-input");
-let password = document.querySelector(".password-input");
-let eyeBall = document.querySelector('#eyeball');
 let displayValue = [];
 
 // Sign In Buttons
@@ -28,7 +26,7 @@ signUpBtn.addEventListener("click", () => {
   displayValue.push(inputValue);
   console.log(displayValue);
   if (input.value.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/)) {
-    //location.href = "/homepage.html";
+    location.href = "/homepage.html";
     input.classList.add("correct-placeholder-color");
     input.style.backgroundColor = "";
     document.querySelector(".email-input").placeholder = "Email Address";
@@ -41,22 +39,58 @@ signUpBtn.addEventListener("click", () => {
   input.value = "";
 
   // Password Logic
+  // Regex Logic: Needs eight characters, 1 uppercase, 1 lowercase and 1 number
   let passwordValue = password.value;
+  let incorrectPasswordText = document.querySelector(
+    ".incorrect-password-text"
+  );
   displayValue.push(passwordValue);
-  let regex =
-    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+  let regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
   console.log(displayValue)
   if (passwordValue.match(regex)) {
-    console.log("Correct");
+    location.href = "/homepage.html";
+    password.style.backgroundColor = "";
+    document.querySelector(".password-input").placeholder = "";
+    incorrectPasswordText.textContent = "";
+    incorrectPasswordText.style.color = "";
   } else {
-    console.log("Wrong");
+    password.style.backgroundColor = "#ffcccb";
+    document.querySelector(".password-input").placeholder = "Incorrect Password";
+    password.classList.add("incorrect-password-color");
+    incorrectPasswordText.textContent =
+      "Needs 8 characters, 1 uppercase/lowercase and 1 number";
+      incorrectPasswordText.style.color = "#ffcccb";
   }
   password.value = "";
 });
 
 // NEXT TO WORK ON ↓
+let password = document.querySelector(".password-input");
+let closeEye = document.querySelector(".close-eye");
+let openEye = document.querySelector('.open-eye');
 
 // Password Eyeball Logic
-eyeBall.addEventListener('click', () => {
-  console.log('Clicked')
+closeEye.addEventListener('click', () => {
+  // Toggle the type attribute
+  const type =
+    password.getAttribute("type") === "password" ? "text" : "password";
+  password.setAttribute("type", type);
+
+  if (closeEye.classList.contains("close-eye")) {
+    closeEye.classList.add("remove-closed-eye");
+    openEye.classList.add("add-open-eye");
+  }
+  
 });
+
+
+openEye.addEventListener('click', () => {
+  const type =
+  password.getAttribute("type") === "password" ? "text" : "password";
+  password.setAttribute("type", type);
+  
+  if (openEye.classList.contains("open-eye")) {
+    openEye.classList.remove("add-open-eye");
+    closeEye.classList.remove("remove-closed-eye");
+  }
+})

@@ -78,6 +78,23 @@
     left: 75%;
     color: #C4C4C4;
     font-size: 16px;
+    cursor: pointer;
+}
+
+.open-eye {
+    display: none !important;
+}
+
+.open-eye.add-open-eye {
+    display: block !important;
+}
+
+.close-eye.remove-closed-eye {
+    display: none !important;
+}
+
+.close-eye {
+    display: block !important;
 }
 
 .login-button {
@@ -195,4 +212,19 @@
 .correct-placeholder-color.email-input::placeholder {
     color: #757575;
     font-weight: 300;
+}
+/* Adding Classes for Password Input Placeholder */
+.incorrect-password-color.password-input::placeholder {
+    color: #000000;
+    font-weight: 700;
+}
+
+/* Created password text */
+.incorrect-password-text {
+    /* color: "#ffcccb"; */
+    width: 210px;
+    margin: 10px auto 0 0;
+    font-size: 12px;
+    padding: 0px 0px;
+    text-align: center;
 }
