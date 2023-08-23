@@ -1,7 +1,11 @@
+/* Lato Text Font */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0; 
+  padding: 0;
+  font-family: 'Lato', sans-serif;
 }
 
 nav {
@@ -13,16 +17,16 @@ nav {
 }
 
 .videoContainer {
-    position: relative;
-    width: 100%;
-    height: 50%;
+  position: relative;
+  width: 100%;
+  height: 50%;
 }
 
 .videoContainer video {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    z-index: 1;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
 
 }
 
@@ -31,12 +35,41 @@ nav {
 }
 
 .videoContainer .overlay {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    z-index: 2;
-    background: rgb(0, 0, 0);
-    opacity: 0.7;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 2;
+  background: rgb(0, 0, 0);
+  opacity: 0.7;
+}
+
+.hero-text {
+position: absolute;
+  top: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  left: 0;
+  right: 0;
+  align-items: center;
+  z-index: 3;
+  color: #ffffff;
+}
+
+.hero-text h1 {
+  font-size: 45px;
+  padding-bottom: 20px;
+}
+
+.hero-text span {
+ font-size: 25px;
+ position: relative;
+ bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 20px;
+  padding-bottom: 20px;
 }
