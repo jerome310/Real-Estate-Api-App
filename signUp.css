@@ -149,7 +149,7 @@
     margin: 15px 25px 0 0;
 }
 
-.google-container  {
+.social-icon-container  {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -165,12 +165,12 @@
     /* display: none; */
 }
 
-.google-container img {
+.social-icon-container img {
     width: 15px;
     object-fit: contain;
 }
 
-.apple-container {
+.social-icon-container {
     margin-right: 5px;
     display: flex;
     align-items: center;
@@ -182,12 +182,12 @@
     cursor: pointer;
 }
 
-.apple-container img {
+.social-icon-container img {
     width: 15px;
     object-fit: contain;
 }
 
-.facebook-container {
+.social-icon-container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -198,8 +198,8 @@
     cursor: pointer;
 }
 
-.facebook-container img {
-    width: 10px;
+.social-icon-container img {
+    width: 15px;
     object-fit: contain;
 }
 

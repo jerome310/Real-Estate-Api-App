@@ -1,36 +1,31 @@
 // Sign Up File
 let signUpBtn = document.querySelector(".sign-up-button");
-let btns = document.querySelectorAll(".sign-up-btns");
+let btns = document.querySelectorAll(".social-icon-container");
 let form = document.getElementById("form");
 let input = document.querySelector(".email-input");
 let displayValue = [];
 
-// Sign In Buttons
+// Socail Media Icon Buttons
 btns.forEach((btn) => {
   btn.addEventListener("click", () => {
     alert("Please, fill out the input fields above");
   });
 });
 
-//Sign In Input Fields
+// Keep Input Value from clearing on refresh
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 });
 
-// NEXT THING TO WORK ON ↓
-
-// WORKING ON FEATURE FOR EMAIL AND PASSWORD INPUT FIELDS
+// Login Input Fields Authenification Section
 signUpBtn.addEventListener("click", () => {
-  // Email Address Logic
+  //Email Address Logic
   let inputValue = input.value;
-  displayValue.push(inputValue);
-  console.log(displayValue);
+  //displayValue.push(inputValue);
   if (input.value.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/)) {
-    location.href = "/homepage.html";
     input.classList.add("correct-placeholder-color");
     input.style.backgroundColor = "";
     document.querySelector(".email-input").placeholder = "Email Address";
-    //subButton.disabled = true;
   } else {
     input.style.backgroundColor = "#ffcccb";
     document.querySelector(".email-input").placeholder = "Valid Email Required";
@@ -44,11 +39,10 @@ signUpBtn.addEventListener("click", () => {
   let incorrectPasswordText = document.querySelector(
     ".incorrect-password-text"
   );
-  displayValue.push(passwordValue);
+  displayValue.push(inputValue, passwordValue);
   let regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
   console.log(displayValue)
   if (passwordValue.match(regex)) {
-    location.href = "/homepage.html";
     password.style.backgroundColor = "";
     document.querySelector(".password-input").placeholder = "";
     incorrectPasswordText.textContent = "";
@@ -62,6 +56,14 @@ signUpBtn.addEventListener("click", () => {
       incorrectPasswordText.style.color = "#ffcccb";
   }
   password.value = "";
+
+  
+  // Both Input Fields Homepage Logic
+  if (
+    inputValue.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/) && passwordValue.match(regex)
+  ) {
+    location.href = "/homepage.html";
+  }
 });
 
 // NEXT TO WORK ON ↓
